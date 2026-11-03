@@ -1,0 +1,89 @@
+{
+  "format_version": 1,
+  "source": {
+    "research_revision": "fc29066d6451e33fc3a8e016ed93ce41007af4fd",
+    "checkpoint": "theta_9000.state",
+    "checkpoint_sha256": "b9b85de71466823aece472c4273b8ab5ff3910ff600b03e6062c0eb0e6b866e8",
+    "exp_id": "muon_adam_sched_lora_v9_a_qv_h48_nt8_0",
+    "optimizer": "muon_adam_sched_lstm_l_ar",
+    "feature_version": "n",
+    "theta_npz_sha256": "7fa58ee6ec99d402b08e2c6f1aa13e6b35b97850851bbf64c4d62af1146919a7",
+    "meta_training": {
+      "lora_targets": [
+        "attn.c_q",
+        "attn.c_v"
+      ],
+      "ranks": [
+        "8",
+        "16",
+        "32"
+      ],
+      "alpha_range": [
+        8.0,
+        32.0
+      ]
+    }
+  },
+  "policy": {
+    "num_features": 20,
+    "lambda_0": 0.001,
+    "alpha_0": 2.0,
+    "tau_0": 0.03,
+    "beta_0": 1.0,
+    "rho_0": 0.01,
+    "c_tau": 0.7,
+    "muon_momentum": 0.95,
+    "adam_b1": 0.9,
+    "adam_b2": 0.999,
+    "adam_eps": 1e-08,
+    "ns_coeffs": [
+      3.4445,
+      -4.775,
+      2.0315
+    ],
+    "ns_iters": 5,
+    "ns_eps": 1e-08,
+    "cos_clamp": 0.0001,
+    "x_eps": 1e-06,
+    "shape_norm_grid": 65,
+    "peak_clamp_mult": 3.0,
+    "feat_eps": 1e-08,
+    "loss_ema_fast": 0.9,
+    "loss_ema_slow": 0.97,
+    "logl0_center": 0.6931471805599453,
+    "logl0_scale": 1.0,
+    "level_scale": 0.7,
+    "trend_scale": 2.0,
+    "snr_scale": 0.25,
+    "snr_eps": 1e-12,
+    "logrmsp_center": -2.995732273553991,
+    "logrmsp_scale": 1.0,
+    "logrmsg_center": -4.605170185988091,
+    "logrmsg_scale": 1.5,
+    "logrms_clip": 6.0,
+    "logw_center": 4.1588830833596715,
+    "logw_scale": 1.3862943611198906,
+    "depth_center": 0.0,
+    "depth_scale": 1.0,
+    "alpha_center": 0.6931471805599453,
+    "alpha_scale": 0.7,
+    "rank_center": 2.772588722239781,
+    "rank_scale": 0.6931471805599453,
+    "logalpha_center": 2.772588722239781,
+    "logalpha_scale": 0.6931471805599453,
+    "gap_scale": 0.5,
+    "logt_center": 5.409890046694324,
+    "logt_scale": 0.80471896627945,
+    "lstm_hidden": 48,
+    "head_gain": 1.0,
+    "lam_warm": 0.0,
+    "ema": 0.0,
+    "c_lambda": 4.5,
+    "c_alpha": 1.0,
+    "c_beta": 1.4,
+    "c_rho": 2.3,
+    "normalize_shape": true,
+    "depth_exponent": 0.5,
+    "depth_ref": 11.3137
+  }
+}
