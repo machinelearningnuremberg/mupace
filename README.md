@@ -14,12 +14,16 @@ We demonstrate a proof of concept with support for Qwen models using Q/V LoRA ad
 ## Installation
 
 Requires Python 3.10 or newer and Transformers 5.21.0 or newer.
-Clone this repository or download and extract its source archive, then run these
-commands from the repository root.
+Install directly from GitHub.
 
 ```bash
-python -m pip install .          # PyTorch workflow
-python -m pip install ".[jax]"   # + the native JAX optimizer
+python -m pip install "git+https://github.com/machinelearningnuremberg/mupace.git"
+```
+
+For JAX support, use the optional extra.
+
+```bash
+python -m pip install "mupace[jax] @ git+https://github.com/machinelearningnuremberg/mupace.git"
 ```
 
 The scheduler weights are included in the package. Base models and Hugging Face
@@ -33,10 +37,10 @@ import mupace
 result = mupace.adapt(
     model="Qwen/Qwen3-0.6B",
     dataset="Lots-of-LoRAs/task045_miscellaneous_sentence_paraphrasing",
-    budget=200,
+    budget=25,    # small dataset (~150 rows); use 200 for larger ones
     rank=8,
     alpha=16,
-    batch_size=None, 
+    batch_size=None,
     gradient_accumulation_steps=None,
     seq_len=None,
 )

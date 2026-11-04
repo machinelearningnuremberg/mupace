@@ -6,3 +6,5 @@ __pycache__/
 tests/
 my_adapter/
 smollm2_adapter/
+.idea/
+.venv/

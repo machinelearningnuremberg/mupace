@@ -8,7 +8,7 @@ import mupace
 result = mupace.adapt(
     model="Qwen/Qwen3-0.6B",
     dataset="Lots-of-LoRAs/task045_miscellaneous_sentence_paraphrasing",
-    budget=200,
+    budget=25,  # Small dataset (~150 rows).
     rank=8,
     alpha=16,
     batch_size=None,  # Sized from your data; an integer overrides it.
